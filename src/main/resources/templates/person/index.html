@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('People')"></head>
+<body>
+<div class="container-fluid text-xs-center">
+    <div class="row"> <!-- row -->
+        <div th:replace="layout :: nav"></div>
+        <div th:replace="layout :: flash"></div>
+
+        <div class="container tasks">
+            <div th:each="person : ${people}" class="col-md-6 task">
+                <div class="to-do bg">
+                    <p class="title-to-do">Person</p>
+                    <div class="form-group">
+                        <p class="text">First name: <span class="text-detail" th:text="${person.firstName}"></span></p>
+                        <p class="text">Last name: <span class="text-detail" th:text="${person.lastName}"></span></p>
+                        <p class="text">Username: <span class="text-detail" th:text="${person.username}"></span></p>
+                        <p class="text">Email: <span class="text-author" th:text="${person.email}"></span></p>
+                        <ul>
+                            <li><a th:href="@{|/people/${person.id}|}"><button name="edit" type="button" class="btn btn-success btn-edit">Detail</button></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="layout :: footer"></div>
+    </div>
+</div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>

@@ -1,0 +1,472 @@
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    margin-bottom: 442px;
+}
+
+.navbar {
+    background-color: #5b3c7f;
+    border-radius: 0;
+    padding-left: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar .nav .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #3A8293;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.active:focus,
+.navbar-light .navbar-nav .nav-link.active:hover {
+    font-weight: bold;
+    color: #3A8293;
+}
+
+.navbar .collapse .navbar-brand {
+    color: #fff;
+}
+
+.navbar .collapse .fa {
+    padding-right: 10px;
+}
+
+.tasks {
+    margin-bottom: 100px;
+}
+
+.task .bg {
+    background-color: #fff;
+    color: #fff;
+    font-size: 1.5em;
+    border: solid 1px #eee;
+    border-width: 0px 1px 2px 1px;
+    border-radius: 7px;
+    padding-bottom: 110px;
+}
+
+.task .title {
+    border-radius: 7px 7px 0 0;
+    background-color: #555;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.task .title-to-do {
+    border-radius: 7px 7px 0 0;
+    background-color: #555;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.task .text {
+    color: #4a4a4a;
+    text-align: justify;
+    padding-left: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.999em;
+}
+
+.task .text:first-child {
+    padding-top: 20px;
+}
+
+.task .to-do {
+    padding-bottom: 20px;
+}
+
+.task {
+    margin-top: 100px;
+}
+
+.task .form-group .form-control {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.task .form-group .btn-primary {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 111px;
+    margin-top: 30px;
+    outline: none;
+    padding: 10px 40px;
+}
+
+.task .form-group .btn-success {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 0;
+    margin-top: 30px;
+    outline: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.task .form-group .btn-danger {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 31px;
+    margin-top: 30px;
+    outline: none;
+}
+
+.task .form-group .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+.task .form-group .btn-primary:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+.task .form-group ul {
+    list-style: none;
+    text-align: left;
+}
+
+.task .form-group ul li {
+    display: inline-block;
+}
+
+.task .form-group ul li .btn-success:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+label {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    padding-top: 15px;
+}
+
+.person {
+    background-color: #fff;
+    color: #fff;
+    font-size: 1.5em;
+    border: solid 1px #eee;
+    border-width: 0px 1px 2px 1px;
+    border-radius: 7px;
+    padding-bottom: 50px;
+}
+
+.person .form-group {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.person .form-group small {
+    margin-bottom: 30px;
+}
+
+.persons {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.person h1 {
+    font-weight: bold;
+    color: #fff;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 20px
+}
+
+.person .form-group .btn-primary {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    outline: none;
+}
+
+.person .form-group .btn-primary:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+.projects {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.project {
+    background-color: #fff;
+    color: #fff;
+    font-size: 1.5em;
+    border: solid 1px #eee;
+    border-width: 0px 1px 2px 1px;
+    border-radius: 7px;
+    padding-bottom: 50px;
+}
+
+.project h1 {
+    font-weight: bold;
+    color: #fff;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 20px
+}
+
+.project .form-group {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.project .form-group .category-select {
+    margin-bottom: 30px;
+}
+
+.project .form-group .category-select label {
+    font-size: 1em;
+}
+
+.project .form-group .btn-primary {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    outline: none;
+}
+
+.project .form-group .btn-primary:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #555;
+    padding: 40px;
+    height: 442px;
+    width: 100%;
+}
+
+.footer .contacts-info a i:hover {
+    color: #3A8293;
+}
+
+.footer .contacts-info i {
+    color: #fff;
+    font-size: 6em;
+}
+
+.footer .contacts-info p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.footer .contacts-social {
+    padding-top: 40px;
+    border-top: 2px solid #fff;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.footer .contacts-social ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer .contacts-social li {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 3em;
+}
+
+.footer .contacts-social li a {
+    color: #fff;
+}
+
+.footer .contacts-social li a:hover {
+    color: #3A8293;
+}
+
+.footer .contacts-social p {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 40px;
+    word-spacing: 1px;
+}
+
+.edit {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.edit:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.edit-person {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.edit-person:hover {
+    color: #3A8293;
+    text-decoration: none;
+}
+
+.task .text-detail {
+    text-transform: capitalize;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 0.7em;
+}
+
+.task .text-author {
+    text-transform: lowercase;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 0.7em;
+}
+
+.task-detail .text-detail {
+    text-transform: capitalize;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.task-detail .text-author {
+    text-transform: lowercase;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.task-detail .to-do {
+    padding-bottom: 20px;
+}
+
+.task-detail {
+    margin: 160px auto;
+    width: 55%;
+}
+
+.task-detail .form-group .form-control {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.task-detail .form-group .btn-primary {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 111px;
+    margin-top: 30px;
+    outline: none;
+    padding: 10px 40px;
+}
+
+.task-detail .form-group .btn-success {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    outline: none;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.task-detail .form-group .btn-danger {
+    background-color: #5b3c7f;
+    border-color: #5b3c7f;
+    float: left;
+    margin-left: 31px;
+    margin-top: 30px;
+    outline: none;
+}
+
+.task-detail .form-group .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
+}
+
+.task-detail .form-group .btn-primary:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+.task-detail .form-group ul {
+    list-style: none;
+    text-align: left;
+}
+
+.task-detail .form-group ul li {
+    display: inline-block;
+}
+
+.task-detail .form-group ul li .btn-success:hover {
+    background-color: #3A8293;
+    border-color: #3A8293;
+}
+
+.task-detail .bg {
+    background-color: #fff;
+    color: #fff;
+    font-size: 1.5em;
+    border: solid 1px #eee;
+    border-width: 0px 1px 2px 1px;
+    border-radius: 7px;
+}
+
+.task-detail .title {
+    border-radius: 7px 7px 0 0;
+    background-color: #555;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.task-detail .title-to-do {
+    border-radius: 7px 7px 0 0;
+    background-color: #555;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.task-detail .text {
+    color: #4a4a4a;
+    text-align: justify;
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.task-detail .text:first-child {
+    padding-top: 40px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}

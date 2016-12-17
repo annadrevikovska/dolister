@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('Done Tasks')"></head>
+<body>
+<div class="container-fluid text-xs-center">
+    <div class="row"> <!-- row -->
+        <div th:replace="layout :: nav"></div>
+        <div th:replace="layout :: flash"></div>
+
+        <div class="container tasks">
+            <div th:each="done : ${dones}" class="col-md-6 task">
+                <div th:style="|background-color:${done.colorCode}|" class="to-do bg">
+                    <p class="title-to-do">Done</p>
+                        <div class="form-group">
+                            <p class="text">Upload date: <span class="text-detail" th:text="${done.uploadDate}"></span></p>
+                            <p class="text">Description: <span class="text-detail" th:text="${done.description}"></span></p>
+                            <p class="text">Project: <span class="text-detail" th:text="${done.project}"></span></p>
+                            <p class="text">Author: <span class="text-author" th:text="${done.person.username}"></span></p>
+                            <ul>
+                                <li><a th:href="@{|/dones/${done.id}|}"><button name="edit" type="button" class="btn btn-success btn-edit">Detail</button></a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="layout :: footer"></div>
+    </div>
+</div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>

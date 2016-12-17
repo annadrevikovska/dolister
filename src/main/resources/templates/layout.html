@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(page_title)" lang="en">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta description="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title th:text="'dolister | ' + ${page_title}">dolister</title>
+
+    <link rel="icon" th:href="@{/favicon.png}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+          integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"/>
+    <!-- Font Import CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700&amp;subset=latin-ext"
+          rel="stylesheet"/>
+    <!-- FontAwesome JS -->
+    <script src="https://use.fontawesome.com/e63f497764.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div class="container-fluid text-xs-center"> <!-- container -->
+    <div class="row"> <!-- row -->
+        <nav th:fragment="nav" class="navbar navbar-light bg-faded"> <!-- navigation -->
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+            </button>
+            <div class="collapse navbar-toggleable-md" id="navbarResponsive"> <!-- navbar -->
+                <a th:href="@{/}" class="navbar-brand">
+                    <i class="fa fa-tasks" aria-hidden="true"></i> doLister
+                </a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/}">To Do</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/doings') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/doings}">Doing</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/dones') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/dones}">Done</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/people') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/people}">People</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/uploadtodo') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/uploadtodo}">Upload To Do</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/uploaddoing') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/uploaddoing}">Upload Doing</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/uploaddone') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/uploaddone}">Upload Done</a></li>
+                    <li class="nav-item"
+                        th:classappend="${#httpServletRequest.servletPath.equals('/uploadpeople') ? 'active' : ''}"><a
+                            class="nav-link" th:href="@{/uploadpeople}">Upload People</a></li>
+                </ul>
+            </div> <!-- !navbar -->
+        </nav> <!-- !navigation -->
+
+        <div th:fragment="flash" th:if="${flash != null}" class="container">
+            <i class="right material-icons" data-close="">close</i>
+            <div th:classappend="${#strings.toLowerCase(flash.status)}" th:text="${flash.message}" class="flash"></div>
+        </div>
+
+        <div th:fragment="footer" class="container-fluid text-xs-center footer">
+            <div class="container-fluid contacts-info">
+                <a href="#navbarResponsive"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                <p>dreviann@fit.cvut.cz</p>
+            </div>
+            <div class="container-fluid contacts-social">
+                <ul>
+                    <li><a href="#" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:dreviann@fit.cvut.cz" title="E-Mail"><i class="fa fa-envelope-o"
+                                                                                aria-hidden="true"></i></a></li>
+                </ul>
+                <p>&copy; Anna Drevikovska 2016</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="scripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+            integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+            crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

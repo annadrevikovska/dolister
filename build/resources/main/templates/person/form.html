@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('Upload People')"></head>
+<body>
+<div class="container-fluid text-xs-center">
+    <div class="row"> <!-- row -->
+        <div th:replace="layout :: nav"></div>
+
+        <div class="container persons">
+            <div class="col person">
+                <h1>Create user</h1>
+                <div class="create-person">
+                    <form th:object="${person}" th:action="@{${action}}" method="post">
+                        <input type="hidden" th:field="*{id}"/>
+                        <div class="form-group">
+                            <label>Enter name:</label>
+                            <input th:field="*{firstName}" name="inputName" type="text" class="form-control" id="name" placeholder="Enter name"/>
+                            <label for="surname">Enter surname:</label>
+                            <input th:field="*{lastName}" name="inputSurname" type="text" class="form-control" id="surname" placeholder="Enter surname"/>
+                            <label for="username">Enter username:</label>
+                            <input th:field="*{username}" name="inputUsername" type="text" class="form-control" id="username" placeholder="Enter username"/>
+                            <label for="email">Email address:</label>
+                            <input th:field="*{email}" name="inputEmail" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input name="submitButton" class="btn btn-primary" type="submit" th:value="${submit}" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="layout :: footer"></div>
+    </div>
+</div>
+<div th:replace="layout :: flash"></div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>

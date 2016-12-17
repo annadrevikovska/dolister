@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head('Upload To Do Tasks')"></head>
+<body>
+<div class="container-fluid text-xs-center">
+    <div class="row"> <!-- row -->
+        <div th:replace="layout :: nav"></div>
+        <div th:replace="layout :: flash"></div>
+
+        <div class="container tasks">
+            <div class="col task">
+                <div class="bg">
+                    <p class="title">To Do</p>
+                    <form th:object="${todo}" th:action="@{${action}}" method="post">
+                        <input type="hidden" th:field="*{id}"/>
+                        <div class="form-group">
+                            <textarea th:field="*{description}" name="toDo" class="form-control" rows="3"></textarea>
+                            <div class="form-group color-select">
+                                <label>Select color:</label>
+                                <select th:field="*{colorCode}" name="colorToDo" class="form-control color">
+                                    <option th:style="|color:${color.hexCode}|" th:each="color : ${colors}"
+                                            th:value="${color.hexCode}" th:text="${color.name}">Aqua
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group category-select">
+                                <label>Select category:</label>
+                                <select th:field="*{category}" name="categoryToDo" class="form-control category">
+                                    <option th:each="category : ${categories}" th:value="${category.name}"
+                                            th:text="${category.name}">BIPA1
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group person-select">
+                                <label>Select user:</label>
+                                <select th:field="*{person.id}" name="personToDo" class="form-control person-select">
+                                    <option th:each="person : ${people}" th:value="${person.id}"
+                                            th:text="${person.username}">hskrony
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group project-select">
+                                <label>Select project:</label>
+                                <select th:field="*{project}" name="projectToDo" class="form-control project-select">
+                                    <option th:each="project : ${projects}" th:value="${project.name}"
+                                            th:text="${project.name}">Programming
+                                    </option>
+                                </select>
+                            </div>
+                            <input name="submitButton" class="btn btn-primary" type="submit" th:value="${submit}"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="layout :: footer"></div>
+    </div>
+</div>
+<div th:replace="layout :: scripts"></div>
+</body>
+</html>
